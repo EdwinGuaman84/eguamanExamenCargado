@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eguamanExamen.Views.vLogin"
+             Title="vLogin">
+    <ContentPage.Resources>
+        <Style x:Key="TituloRojo" TargetType="Label">
+            <Setter Property="TextColor" Value="Red"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="Center"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="30">
+        <Label Text="Examen Momento 1 Edwin Guamán" Style="{StaticResource TituloRojo}" />
+
+        <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2021/05/PLATA-1.png" HeightRequest="120" HorizontalOptions="Center"/>
+
+        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*">
+            <Label Text="Usuario:" FontSize="25" TextColor="red" Grid.Row="0" Grid.Column="0"/>
+            <Entry x:Name="entryUsuario" Grid.Row="0" Grid.Column="1"/>
+
+            <Label Text="Contraseña:" FontSize="25" TextColor="red" Grid.Row="1" Grid.Column="0"/>
+            <Entry x:Name="entryContrasena" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+
+        <Button Text="Iniciar Sesión" BackgroundColor="Black" Clicked="Button_Clicked" Padding="25"/>
+    </VerticalStackLayout>
+
+
+</ContentPage>

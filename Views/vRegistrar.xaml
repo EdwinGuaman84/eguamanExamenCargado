@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="eguamanExamen.Views.vRegistrar"
+             Title="vRegistrar">
+    
+        <VerticalStackLayout Padding="20">
+        <Label Text="REGISTRO" FontSize="25" TextColor="Red" HorizontalOptions="Center" />
+
+        <Label x:Name="lblUsuario" Text="Usuario Conectado:       " FontAttributes="Bold" HorizontalOptions="Center"/>
+            <Label Text="REGISTRO" Style="{StaticResource TituloRojo}" />
+
+        
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto, *">
+                <Label Text="Fecha:" Grid.Row="0" Grid.Column="0"/>
+                <DatePicker x:Name="fechaPicker" Grid.Row="0" Grid.Column="1"/>
+
+                <Label Text="País:" Grid.Row="1" Grid.Column="0"/>
+            <Picker x:Name="pickerPais" Grid.Row="1" Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ecuador</x:String>
+                        <x:String>Colombia</x:String>
+                        <x:String>Perú</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Ciudad:" Grid.Row="2" Grid.Column="0"/>
+            <Picker x:Name="pickerCiudad" Grid.Row="2" Grid.Column="1">
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Quito</x:String>
+                    <x:String>Guayaquil</x:String>
+                    <x:String>Cuenca</x:String>
+                </x:Array>
+            </Picker>
+
+            <Label Text="Monto Inicial:" Grid.Row="3" Grid.Column="0"/>
+                <Entry x:Name="entryInicial" Grid.Row="3" Grid.Column="1" Keyboard="Numeric"/>
+
+                <Label Text="Pago mensual:" Grid.Row="4" Grid.Column="0"/>
+                <Entry x:Name="entryMensual" Grid.Row="4" Grid.Column="1" IsReadOnly="True"/>
+            </Grid>
+
+            <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*,*">
+                <Label Text="Nombre" Grid.Row="0" Grid.Column="0"/>
+                <Label Text="Apellido" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="Edad" Grid.Row="0" Grid.Column="2"/>
+
+                <Entry x:Name="entryNombre" Grid.Row="1" Grid.Column="0"/>
+                <Entry x:Name="entryApellido" Grid.Row="1" Grid.Column="1"/>
+                <Entry x:Name="entryEdad" Grid.Row="1" Grid.Column="2" Keyboard="Numeric"/>
+            </Grid>
+
+            <Button Text="Ver Resumen" Clicked="Button_Clicked"/>
+
+
+
+
+        </VerticalStackLayout>
+    
+    
+    
+    
+    
+</ContentPage>
