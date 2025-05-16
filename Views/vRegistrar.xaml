@@ -28,11 +28,7 @@
 
             <Label Text="Ciudad:" Grid.Row="2" Grid.Column="0"/>
             <Picker x:Name="pickerCiudad" Grid.Row="2" Grid.Column="1">
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Quito</x:String>
-                    <x:String>Guayaquil</x:String>
-                    <x:String>Cuenca</x:String>
-                </x:Array>
+               
             </Picker>
 
             <Label Text="Monto Inicial:" Grid.Row="3" Grid.Column="0"/>
