@@ -7,9 +7,13 @@
             InitializeComponent();
         }
 
+        
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            return new Window(new Views.vLogin());
+            // Envuelve vLogin dentro de NavigationPage para habilitar navegación con PushAsync
+            return new Window(new NavigationPage(new Views.vLogin()));
         }
+
+
     }
 }

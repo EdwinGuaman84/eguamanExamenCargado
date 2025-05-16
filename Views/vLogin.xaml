@@ -3,30 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="eguamanExamen.Views.vLogin"
              Title="vLogin">
+
     <ContentPage.Resources>
-        <Style x:Key="TituloRojo" TargetType="Label">
-            <Setter Property="TextColor" Value="Red"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="HorizontalOptions" Value="Center"/>
-            <Setter Property="HorizontalTextAlignment" Value="Center"/>
-        </Style>
+        <ResourceDictionary>
+           
+            <Style x:Key="TituloRojo" TargetType="Label">
+                <Setter Property="TextColor" Value="Red" />
+                <Setter Property="FontSize" Value="20" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
     </ContentPage.Resources>
 
-    <VerticalStackLayout Padding="30">
+    <VerticalStackLayout
+        Padding="20"
+        Spacing="20"
+        >
+
         <Label Text="Examen Momento 1 Edwin Guamán" Style="{StaticResource TituloRojo}" />
+        <Image Source="logo.png" HeightRequest="100" HorizontalOptions="Center" />
+        <Label Text="Iniciar Sesión" Style="{StaticResource TituloRojo}" />
+        <Grid RowDefinitions="Auto,Auto"
+              ColumnDefinitions="*,*"
+              Padding="10"
+              ColumnSpacing="10"
+              RowSpacing="10">
 
-        <Image Source="https://www.uisrael.edu.ec/wp-content/uploads/2021/05/PLATA-1.png" HeightRequest="120" HorizontalOptions="Center"/>
-
-        <Grid RowDefinitions="Auto,Auto" ColumnDefinitions="*,*">
-            <Label Text="Usuario:" FontSize="25" TextColor="red" Grid.Row="0" Grid.Column="0"/>
-            <Entry x:Name="entryUsuario" Grid.Row="0" Grid.Column="1"/>
-
-            <Label Text="Contraseña:" FontSize="25" TextColor="red" Grid.Row="1" Grid.Column="0"/>
-            <Entry x:Name="entryContrasena" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
+            <Label Text="Usuario:" Grid.Row="0" Grid.Column="0" VerticalOptions="Center" TextColor="Red"/>
+            <Entry x:Name="entryUsuario" Placeholder="Ingrese usuario" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Contraseña:" Grid.Row="1" Grid.Column="0" VerticalOptions="Center" TextColor="Red"/>
+            <Entry x:Name="entryContrasena" Placeholder="Ingrese contraseña" IsPassword="True" Grid.Row="1" Grid.Column="1"/>
         </Grid>
+        <Button Text="Iniciar Sesión" Clicked="Button_Clicked" BackgroundColor="Black" TextColor="White" />
 
-        <Button Text="Iniciar Sesión" BackgroundColor="Black" Clicked="Button_Clicked" Padding="25"/>
     </VerticalStackLayout>
+
+
 
 
 </ContentPage>

@@ -24,15 +24,16 @@ public partial class vLogin : ContentPage
                
 
                 DisplayAlert("Bienvenido:", user, "",  "OK");
-                Application.Current.OpenWindow(new Window(new vRegistrar(user)));
+                Application.Current.OpenWindow(new Window(new Views.vRegistrar(user)));
 
-
+              //  NavigationPage.PushAsync(new Views.vRegistrar(user));
+             //   await Navigation.PushAsync(new Views.vRegistrar(user));
 
                 return;
             }
         }
 
-        DisplayAlert("Error", "Usuario o contraseña incorrectos", "OK");
+        DisplayAlert("Error", "Datois incorrectos", "OK");
 
 
     }
